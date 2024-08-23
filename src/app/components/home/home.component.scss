@@ -1,12 +1,46 @@
 @import "../../../../color-variables.scss";
 
 .app-home{
-
     display: flex;
-    justify-content: center;
-
+    justify-content: center; 
+    width: 100vw; 
+    padding: 1rem; 
+    box-sizing: border-box;
+ 
     background-color: $base-background;
-
-    width: 100vw;
   
 }
+.content {
+    display: grid;
+    grid-template-rows: auto auto; 
+    row-gap: 4.5rem;
+    width: 54rem; 
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span:nth-child(1) {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 160%;
+      color: $base-subtitle;
+    }
+    span:nth-child(2) {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 160%;
+      color: $base-span;
+    }
+}  
+
+

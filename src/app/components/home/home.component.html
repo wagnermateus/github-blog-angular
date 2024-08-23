@@ -1,3 +1,14 @@
 <main class="app-home">
-  <app-profile-card></app-profile-card>
+  <div class="content">
+    <app-profile-card></app-profile-card>
+    <section class="grid-item">
+      <div class="section-header">
+        <div class="details">
+          <span>Publicações</span>
+          <span>{{ totalPosts }} publicações</span>
+        </div>
+        <app-search-input (input)="onInputChange($event)"></app-search-input>
+      </div>
+    </section>
+  </div>
 </main>
