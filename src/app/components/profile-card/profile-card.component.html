@@ -1,11 +1,13 @@
 @if(user){
 <section class="app-profile-card">
-  <img
-    alt="Foto de perfil do usuário"
-    src="{{ user.avatar_url }}"
-    width="148"
-    height="148"
-  />
+  <div class="image-container">
+    <img
+      alt="Foto de perfil do usuário"
+      src="{{ user.avatar_url }}"
+      width="148"
+      height="148"
+    />
+  </div>
   <div class="card-content">
     <div class="card-header">
       <app-title [title]="user.name"></app-title>
