@@ -41,17 +41,35 @@
     flex-direction: row;
     justify-content: space-between;
     margin-right: 1rem;
-
-    a {
-       display: flex;
-       gap: 0.5rem;
-       align-items: center;
-
-       color: $blue;
-       font-size: 0.75rem;
-       text-decoration: none;
-    }
+    
 }
+
+a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    color: $blue;
+    font-size: 0.75rem;
+    text-decoration: none;
+
+    position: relative;
+
+ }
+ a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: $blue; 
+    transition: width 0.3s ease;
+  }
+
+  a:hover::after {
+    width: 100%; 
+  }
 
 .card-profile-details{
     display:flex;
