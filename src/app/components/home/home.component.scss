@@ -1,9 +1,12 @@
 @import "../../../../color-variables.scss";
 
 .app-home{
+
+    display: flex;
+    justify-content: center;
+
     background-color: $base-background;
-    padding-left: 18rem;
-    padding-right: 18rem;
+
     width: 100vw;
   
 }
