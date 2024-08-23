@@ -1,0 +1,57 @@
+@import "../../../../color-variables.scss";
+
+.app-profile-card {
+    position: relative;
+    margin: auto;
+    margin-top: -6.625rem ;  
+
+    max-width: 54rem;
+    height: 13.25rem;
+
+    background-color: $base-profile;
+
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    img{
+        margin-left: 2.5rem;
+
+        border-radius: 8px;
+    }
+}
+.card-content{
+    width: 100%;
+}
+.card-header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+
+    a {
+       display: flex;
+       gap: 0.5rem;
+       align-items: center;
+
+       color: $blue;
+       font-size: 0.75rem;
+       text-decoration: none;
+    }
+}
+
+.card-profile-details{
+    display:flex;
+    flex-direction: row;
+    gap:1.5rem;
+
+    margin-top: 1.5rem;
+
+    i {
+        font-size: 1.125rem;
+        color: $base-label;
+    }
+}

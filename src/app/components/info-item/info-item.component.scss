@@ -1,0 +1,17 @@
+@import "../../../../color-variables.scss";
+
+
+.app-info-item{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+
+    span {
+        font-size: 1rem;
+        color: $base-subtitle;
+        font-weight: 400;
+        line-height: 160%;
+    }
+   
+}

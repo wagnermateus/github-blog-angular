@@ -1,0 +1,33 @@
+@if(user){
+<section class="app-profile-card">
+  <img
+    alt="Foto de perfil do usuário"
+    src="{{ user.avatar_url }}"
+    width="148"
+    height="148"
+  />
+  <div class="card-content">
+    <div class="card-header">
+      <app-title [title]="user.name"></app-title>
+      <a href="https://github.com/wagnermateus" target="_blank">
+        <span>GITHUB</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+    <div>
+      <app-text [text]="user.bio"></app-text>
+    </div>
+    <div class="card-profile-details">
+      <app-info-item [info]="user.login">
+        <i class="fa-brands fa-github"></i>
+      </app-info-item>
+      <app-info-item [info]="user.company">
+        <i class="fa-solid fa-building"></i>
+      </app-info-item>
+      <app-info-item [info]="user.followers.toString() + ' Seguidores'">
+        <i class="fa-solid fa-user-group"></i>
+      </app-info-item>
+    </div>
+  </div>
+</section>
+}
