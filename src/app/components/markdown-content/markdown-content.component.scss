@@ -1,0 +1,19 @@
+@import "../../../../color-variables.scss";
+
+.app-markdown-content{
+ 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: $base-text;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limita a 5 linhas */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Oculta o texto que ultrapassa as linhas permitidas */
+    text-overflow: ellipsis; /* Adiciona reticências ao final do texto */
+
+
+}
+

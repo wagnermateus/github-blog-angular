@@ -4,10 +4,12 @@ import { SearchInputComponent } from '../search-input/search-input.component';
 import { catchError, of } from 'rxjs';
 import { Issue } from '../../../interfaces/issue.interfac';
 import { HttpClient } from '@angular/common/http';
+import { PostComponent } from '../post/post.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProfileCardComponent, SearchInputComponent],
+  imports: [ProfileCardComponent, SearchInputComponent, PostComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

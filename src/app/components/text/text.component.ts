@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-text',
   standalone: true,
@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TextComponent {
   @Input() text: string = '';
+  htmlContent: SafeHtml = '';
 }

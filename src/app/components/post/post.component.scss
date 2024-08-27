@@ -1,0 +1,45 @@
+@import "../../../../color-variables.scss";
+
+.app-post{
+  
+  
+    display: flex;
+    flex-direction: column;
+  
+    gap: 1.25rem;
+
+    height: 16.25rem;
+    max-width: 26rem;
+
+    padding: 2rem;
+
+    background-color: $base-post;
+    border-radius: 10px;
+    text-decoration: none;
+
+   strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 130%;
+    color: $base-title;
+   }
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: space-between;
+
+    strong {
+        flex: 1;
+    }
+
+    span {
+        color: $base-span;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 160%;
+    }
+}
+
