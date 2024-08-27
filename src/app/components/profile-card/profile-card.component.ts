@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../../interfaces/user.interface';
 import { TitleComponent } from '../title/title.component';
-import { TextComponent } from '../text/text.component';
 import { NgOptimizedImage } from '@angular/common';
 import { InfoItemComponent } from '../info-item/info-item.component';
+import { TextComponent } from '../text/text.component';
 
 @Component({
   selector: 'app-profile-card',

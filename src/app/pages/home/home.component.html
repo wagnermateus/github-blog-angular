@@ -10,11 +10,11 @@
         <app-search-input (input)="onInputChange($event)"></app-search-input>
       </div>
       <div class="posts">
-        @for( issue of issues; track issue.number){
+        @for( post of posts; track post.number){
         <app-post-card
-          [title]="issue.title"
-          [date]="issue.created_at"
-          [text]="issue.body"
+          [title]="post.title"
+          [date]="post.created_at"
+          [text]="post.body"
         ></app-post-card>
 
         }
