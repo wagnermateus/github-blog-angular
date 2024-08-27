@@ -5,13 +5,13 @@ import { ptBR } from 'date-fns/locale';
 import { MarkdownContentComponent } from '../markdown-content/markdown-content.component';
 
 @Component({
-  selector: 'app-post',
+  selector: 'app-post-card',
   standalone: true,
   imports: [TitleComponent, MarkdownContentComponent],
-  templateUrl: './post.component.html',
-  styleUrl: './post.component.scss',
+  templateUrl: './post-card.component.html',
+  styleUrl: './post-card.component.scss',
 })
-export class PostComponent {
+export class PostCardComponent {
   @Input() title: string = '';
   @Input() date!: Date;
   @Input() text: string = '';

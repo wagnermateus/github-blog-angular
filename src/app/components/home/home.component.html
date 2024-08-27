@@ -11,11 +11,11 @@
       </div>
       <div class="posts">
         @for( issue of issues; track issue.number){
-        <app-post
+        <app-post-card
           [title]="issue.title"
           [date]="issue.created_at"
           [text]="issue.body"
-        ></app-post>
+        ></app-post-card>
 
         }
       </div>
