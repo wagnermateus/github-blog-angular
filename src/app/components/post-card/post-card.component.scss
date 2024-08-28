@@ -19,10 +19,6 @@
 
     cursor: pointer;
 
-    hover {
-        border: 2px $base-label solid;
-        }
-    
 
    strong {
     font-size: 1.25rem;
@@ -31,6 +27,9 @@
     color: $base-title;
    }
 }
+.app-post-card:hover {
+    border: 2px $base-label solid;
+    }
 
 
 .post-header {
