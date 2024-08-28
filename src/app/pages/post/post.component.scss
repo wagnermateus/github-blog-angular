@@ -1,0 +1,106 @@
+@import "../../../../color-variables.scss";
+
+.app-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    box-sizing: border-box;
+    background-color: $base-background;
+}
+
+.card-container {
+    //width: 100%;
+    margin-top: -6%;
+    
+    padding: 2rem; 
+
+
+    background-color: $base-profile;
+
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: row;
+   
+   
+
+    a {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    
+        color: $blue;
+        font-size: 0.75rem;
+        text-decoration: none;
+    
+        position: relative;
+    
+     }
+     a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $blue; 
+        transition: width 0.3s ease;
+      }
+    
+      a:hover::after {
+        width: 100%; 
+      }
+    
+    
+}
+.card-content {
+
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+
+    button {
+        all: unset;
+        cursor: pointer;
+        color: $blue;
+        font-size: 0.75rem;
+
+       
+    }
+}
+
+.post-details {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:1.5rem;
+
+    margin-top: 0.5rem;
+
+    i {
+        font-size: 1.125rem;
+        color: $base-label;
+    }
+}
+
+.markdown-container{
+    
+text-align: start;
+max-width: 100%;
+
+div:nth-child(1){
+
+    img {
+        width: 100%;
+    }
+}
+    
+}

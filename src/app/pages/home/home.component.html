@@ -15,6 +15,7 @@
           [title]="post.title"
           [date]="post.created_at"
           [text]="post.body"
+          (click)="handleViewPost(post.number)"
         ></app-post-card>
 
         }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../components/profile-card/profile-card.component';
 import { SearchInputComponent } from '../../components/search-input/search-input.component';
-import { Post } from '../../../interfaces/post.interfac';
+import { Post } from '../../../interfaces/post.interface';
 import { PostCardComponent } from '../../components/post-card/post-card.component';
 import { PostService } from '../../services/post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent {
   homepageDataIsLoading: boolean = true;
   searchTerm: string = '';
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit() {
     this.getPosts();
@@ -42,5 +43,9 @@ export class HomeComponent {
         console.error('There was an error!', error);
       },
     });
+  }
+
+  handleViewPost(postNumber: number) {
+    this.router.navigate(['/post', postNumber]);
   }
 }

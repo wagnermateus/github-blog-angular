@@ -17,6 +17,13 @@
     border-radius: 10px;
     text-decoration: none;
 
+    cursor: pointer;
+
+    hover {
+        border: 2px $base-label solid;
+        }
+    
+
    strong {
     font-size: 1.25rem;
     font-weight: 700;
@@ -24,6 +31,7 @@
     color: $base-title;
    }
 }
+
 
 .post-header {
     display: flex;
@@ -41,5 +49,14 @@
         font-size: 0.875rem;
         line-height: 160%;
     }
+}
+
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limita a 5 linhas */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Oculta o texto que ultrapassa as linhas permitidas */
+    text-overflow: ellipsis; /* Adiciona reticências ao final do texto */
 }
 

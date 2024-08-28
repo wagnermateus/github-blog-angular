@@ -1,1 +1,35 @@
-<p>post works!</p>
+@if(post){
+
+<main class="app-post">
+  <section class="card-container">
+    <div class="card-content">
+      <div class="card-header">
+        <button (click)="goBack()">
+          <i class="fa-solid fa-chevron-left"></i>
+          VOLTAR
+        </button>
+        <a [href]="post.html_url" target="_blank">
+          <span> VER NO GITHUB</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <app-title [title]="post.title"></app-title>
+
+      <div class="post-details">
+        <app-info-item [info]="post.user.login">
+          <i class="fa-brands fa-github"></i>
+        </app-info-item>
+        <app-info-item [info]="getDate()">
+          <i class="fa-solid fa-calendar-day"></i>
+        </app-info-item>
+        <app-info-item [info]="post.comments + ' Comentários'">
+          <i class="fa-solid fa-comment"></i>
+        </app-info-item>
+      </div>
+    </div>
+  </section>
+  <section class="markdown-container">
+    <app-markdown-content [markdownContent]="post.body"></app-markdown-content>
+  </section>
+</main>
+}

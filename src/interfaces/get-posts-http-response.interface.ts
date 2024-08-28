@@ -1,4 +1,4 @@
-import { Post } from './post.interfac';
+import { Post } from './post.interface';
 
 export interface GetPostsHttpResponse {
   total_count: number;

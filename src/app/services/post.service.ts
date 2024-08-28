@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GetPostsHttpResponse } from '../../interfaces/get-posts-http-response.interface';
+import { Post } from '../../interfaces/post.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,11 @@ export class PostService {
         q: `repo:wagnermateus/github-blog ${searchTerm}`,
       },
     });
+  }
+
+  fetchPost(postNumber: string): Observable<Post> {
+    const endpointUrl = `https://api.github.com/repos/wagnermateus/github-blog/issues/${postNumber}}
+    )}`;
+    return this.http.get<Post>(endpointUrl);
   }
 }
